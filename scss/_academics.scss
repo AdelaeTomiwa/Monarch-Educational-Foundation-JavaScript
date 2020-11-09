@@ -1,0 +1,132 @@
+.academics {
+   margin-top: 8rem;
+
+   // Showcase
+   .showcase {
+      &-img {
+         height: 70vh;
+         position: relative;
+
+         .showcase-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            background-color: rgba($grey-color, 0.6);
+            padding: 1rem 2rem;
+            box-shadow: 0px 0px 50px $dark-color;
+
+            h1 {
+               font-size: 3rem;
+            }
+         }
+
+         img {
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+   }
+
+   .head-profile {
+      padding: 1.5rem 0;
+
+      .boxes {
+         display: grid;
+         grid-template-columns: 1fr 2fr;
+      }
+
+      &-img {
+         height: 300px;
+         width: 300px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         margin: 1rem 0;
+
+         img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 50%;
+            border: 3px solid $primary-color;
+         }
+      }
+
+      &-content {
+         width: 85%;
+
+         h2 {
+            margin-bottom: 1rem;
+         }
+      }
+   }
+
+   .curriculum {
+      background-color: $grey-color;
+      text-align: center;
+      padding: 1.5rem 0;
+   }
+
+   .curriculum-box {
+      padding: 1.5rem 0;
+      .boxes {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         grid-gap: 2rem;
+
+         .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            background-color: $light-color;
+            box-shadow: 0px 0px 10px $dark-color;
+
+            img {
+               height: 300px;
+            }
+
+            h3 {
+               margin: 0.5rem 0;
+            }
+         }
+      }
+   }
+
+   .age-group {
+      background-color: $primary-color;
+      color: $light-color;
+      padding: 1.5rem 0;
+
+      h2 {
+         text-align: center;
+         margin: 0 0 0.5rem 0;
+      }
+
+      .boxes {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         grid-gap: 1rem;
+
+         .box {
+            background-color: $light-color;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: $dark-color;
+            padding: 0.5rem;
+            justify-content: center;
+
+            h5 {
+               color: $primary-color;
+            }
+         }
+      }
+   }
+}

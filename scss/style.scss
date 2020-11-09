@@ -1,0 +1,252 @@
+@import 'config';
+@import 'utilities';
+@import 'home';
+@import 'about';
+@import 'why_monarch';
+@import 'contact';
+@import 'news';
+@import 'events';
+@import 'calender';
+@import 'directions';
+@import 'map';
+@import 'academics';
+// // @import 'gallery';
+// // @import 'uniform';
+@import 'admission';
+@import 'admission_success';
+@import 'schedule';
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Lato', sans-serif;
+   font-family: 17px;
+   line-height: 1.7;
+   min-height: 100vh;
+   min-width: 100%;
+   background-color: $light-color;
+   color: $dark-color;
+   overflow-x: hidden;
+}
+
+header {
+   box-shadow: 5px 0px 20px $dark-color;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 6;
+
+   .top-nav {
+      background-color: $grey-color;
+
+      ul {
+         display: flex;
+         align-items: flex-end;
+         justify-content: flex-end;
+         width: 100%;
+
+         li {
+            margin: 0.3rem 1rem;
+
+            a {
+               @include easeOut;
+
+               &:hover {
+                  color: $secondary-color;
+               }
+            }
+         }
+      }
+   }
+
+   nav {
+      background-color: $light-color;
+      color: $dark-color;
+      position: relative;
+
+      .nav {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+
+         & .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: $primary-color;
+
+            h2 {
+               font-size: 2rem;
+            }
+
+            h4 {
+               font-size: 1.3rem;
+            }
+         }
+
+         .burger {
+            display: none;
+            div {
+               width: 28px;
+               height: 3px;
+               margin: 0 0 5px 0;
+               background-color: $primary-color;
+               @include easeOut;
+            }
+
+            &.close {
+               .line-1 {
+                  transform: rotate(45deg) translate(5px, 5px);
+               }
+               .line-2 {
+                  opacity: 0;
+               }
+               .line-3 {
+                  transform: rotate(-45deg) translate(6px, -6px);
+               }
+            }
+         }
+
+         &-links {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-direction: column;
+            // width: 100%;
+            @include easeOut;
+
+            .quick-contact {
+               display: flex;
+               h5 {
+                  margin: 0 1rem;
+                  font-weight: lighter;
+                  i {
+                     margin-right: 0.5rem;
+                     // color: $primary-color;
+                  }
+               }
+            }
+
+            .nav-items {
+               width: 100%;
+               ul {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+
+                  .nav-item-mobile {
+                     display: none;
+                  }
+
+                  li {
+                     margin: 1rem 1rem 0;
+                     font-size: 1rem;
+
+                     a {
+                        @include easeOut;
+
+                        &:hover {
+                           color: $secondary-color;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+
+         .nav-links.open {
+            display: none;
+         }
+      }
+   }
+}
+
+// Footer
+footer {
+   background-color: $grey-color;
+
+   .footer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+      text-align: center;
+      padding: 2rem;
+
+      .first-half {
+         padding: 0.5rem 2rem;
+
+         &:first-child {
+            text-align: left;
+
+            .logo {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-direction: column;
+               color: $primary-color;
+               margin: 1rem 0;
+            }
+
+            ul {
+               margin-left: 2rem;
+
+               li {
+                  font-size: 0.9rem;
+                  margin: 0.8rem 0;
+
+                  a {
+                     color: $primary-color;
+
+                     &:hover {
+                        text-decoration: underline;
+                     }
+                  }
+               }
+            }
+
+            .second-child {
+               border-top: 2px solid lighten($dark-color, 50%);
+            }
+         }
+      }
+
+      .second-half {
+         padding: 0.5rem 2rem;
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         margin-top: 10vh;
+
+         ul {
+            li {
+               font-size: 0.9rem;
+               margin: 0.8rem 0;
+               text-align: left;
+
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
+            .social {
+               a {
+                  color: $primary-color;
+               }
+            }
+         }
+      }
+   }
+
+   .main-footer {
+      background-color: darken($grey-color, 20%);
+      text-align: center;
+      padding: 1rem 0;
+   }
+}
+
+@import 'mobile';
+@import 'mobile_smart_phones';

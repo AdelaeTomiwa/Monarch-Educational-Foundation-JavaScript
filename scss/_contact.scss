@@ -1,0 +1,93 @@
+.contact {
+   margin-top: 8rem;
+
+   .showcase {
+      // Showcase
+      .showcase {
+         &-img {
+            height: 70vh;
+            position: relative;
+
+            .showcase-content {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               width: 80%;
+               text-align: center;
+               transform: translate(-50%, -50%);
+               background-color: rgba($grey-color, 0.6);
+               padding: 1rem 2rem;
+               box-shadow: 0px 0px 50px $dark-color;
+
+               h1 {
+                  font-size: 3rem;
+               }
+            }
+
+            img {
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+      }
+   }
+
+   .general-enquires {
+      padding: 1rem 0 2rem 0;
+      background-color: $light-color;
+
+      h2 {
+         margin: 1rem 0;
+         font-size: 1.5rem;
+      }
+
+      p {
+         font-size: 1rem;
+      }
+
+      h5 {
+         margin: 0.5rem 0;
+      }
+   }
+
+   .contact-box {
+      background-color: $grey-color;
+      padding: 2rem;
+
+      .boxes {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
+         align-items: center;
+         margin-top: 1rem;
+         div {
+            text-align: center;
+            background-color: $light-color;
+            box-shadow: 0px 0px 20px $dark-color;
+            font-size: 1.5rem;
+            padding: 1.5rem 2.5rem;
+            margin-bottom: 3rem;
+            @include easeOut;
+
+            &:hover {
+               padding: 0.5rem 1.5rem;
+               color: $secondary-color;
+
+               span {
+                  color: $dark-color;
+               }
+            }
+         }
+      }
+   }
+
+   // Getting Here
+   .getting-here {
+      background-color: $light-color;
+      padding: 1rem 0;
+
+      h3 {
+         font-size: 1.5rem;
+      }
+   }
+}

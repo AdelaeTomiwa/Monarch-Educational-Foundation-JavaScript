@@ -1,0 +1,159 @@
+.container {
+   width: 90%;
+   margin: auto;
+}
+
+img {
+   width: 100%;
+}
+
+@mixin easeOut {
+   transition: all ease-out 0.5s;
+}
+
+.text-primary {
+   color: $primary-color;
+}
+
+.text-secondary {
+   color: $secondary-color;
+}
+
+a {
+   color: $dark-color;
+   text-decoration: none;
+}
+
+ul {
+   list-style: none;
+}
+
+// Schedule
+.schedule {
+   background-color: $primary-color;
+   color: $light-color;
+   text-align: center;
+   padding: 1rem;
+
+   h3 {
+      font-size: 1.5rem;
+   }
+
+   button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: darken($primary-color, 10%);
+      border: none;
+      outline: none;
+      color: $light-color;
+      font-weight: bold;
+      cursor: pointer;
+      @include easeOut;
+
+      i {
+         margin-left: 0.5rem;
+      }
+
+      &:hover {
+         background-color: darken($primary-color, 20%);
+      }
+   }
+}
+
+// News and Events
+.news-events {
+   background-color: $light-color;
+
+   .contents {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10rem;
+      padding: 2rem 0;
+
+      div {
+         text-align: center;
+         background-color: $primary-color;
+         padding: 2rem 1rem;
+         box-shadow: 0px 0px 5px $dark-color;
+
+         a {
+            color: $light-color;
+         }
+      }
+
+      .events {
+         background-color: $grey-color;
+
+         a {
+            color: $primary-color;
+         }
+      }
+   }
+}
+
+// Connect Social
+.connect-social {
+   text-align: center;
+   background-color: $grey-color;
+   padding: 2rem 0;
+
+   h3 {
+      margin: 0.5rem 0 1rem 0;
+   }
+
+   .boxes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      margin-bottom: 1rem;
+
+      a {
+         color: $light-color;
+      }
+
+      div {
+         padding: 0.3rem 0;
+         box-shadow: 0px 0px 5px $dark-color;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         @include easeOut;
+
+         h4 {
+            margin-left: 0.5rem;
+         }
+
+         &:hover {
+            transform: scale(0.9);
+         }
+      }
+
+      .facebook-div {
+         background-color: #4267b2;
+      }
+
+      .twitter-div {
+         background-color: #1da1f2;
+      }
+
+      .instagram-div {
+         background-color: #3f729b;
+      }
+   }
+
+   .connect-details {
+      h4 {
+         font-size: 1.2rem;
+      }
+
+      h5 {
+         font-weight: lighter;
+         font-size: 1rem;
+         margin-bottom: 0.5rem;
+      }
+
+      p {
+         font-size: 0.9rem;
+      }
+   }
+}
